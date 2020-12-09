@@ -19,8 +19,10 @@
 <script>
 export default {
   name: 'ItemsList',
-  props: {
-    items: Array
+  computed: {
+    items() {
+      return this.$root.$data.items;
+    }
   },
 }
 </script>
@@ -59,7 +61,7 @@ export default {
 }
 
 .info {
-  background: #F2921D;
+  background: #FFD4D7;
   color: #000;
   padding: 10px 30px;
   height: 80px;
@@ -85,13 +87,6 @@ export default {
 
 .description p {
   width: 200px;
-}
-
-button {
-  height: 50px;
-  background: #000;
-  color: white;
-  border: none;
 }
 
 .auto {
